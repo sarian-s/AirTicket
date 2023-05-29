@@ -4,6 +4,12 @@ public class TicketTimeComparator implements Comparator<Ticket> {
 
     @Override
     public int compare(Ticket t1, Ticket t2) {
-        // ваш код
+        if(t1.getTimeTo()-t1.getTimeFrom()<t2.getTimeTo()-t2.getTimeFrom()){
+            return -1;
+        } else if (t1.getTimeTo()-t1.getTimeFrom()>t2.getTimeTo()-t2.getTimeFrom()) {
+            return 1;
+        }
+        return 0;// ваш код
     }
+
 }
